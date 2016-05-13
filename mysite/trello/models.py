@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 
 # Create your models here.
 class Task(models.Model):
@@ -6,3 +7,4 @@ class Task(models.Model):
     title = models.CharField(max_length=100)
     status = models.CharField(max_length=100)
     priority = models.CharField(max_length=100)
+    time_modified = models.DateTimeField(auto_now=True)
