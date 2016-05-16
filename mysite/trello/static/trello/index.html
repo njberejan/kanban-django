@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>TASKS</title>
+    <link rel="stylesheet" href="stylesheet.css">
   </head>
   <body>
-    <ul id="tasks">
-
-    <!-- </ul>
+    <div style="display:none">
+    <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+    </div>
     <form id="task" action="" method="post">
       <legend>Create Task</legend>
       <label for="">Name</label>
@@ -22,9 +23,13 @@
       <!-- <label for="">Rarity</label>
       <input type="text" name="rarity" value="">
       <br /> -->
-      <!-- <input type="submit" value="Create Task">
-    </form> --> -->
+      <input type="submit" value="Create Task">
+    </form>
+    <ul id="tasks">
+    </ul>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="main.js"></script>
+    <form id="task" action="" method="delete">
+    <input type="submit" value="Delete Task">
   </body>
 </html>
